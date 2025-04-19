@@ -1,0 +1,30 @@
+// manifest.json
+    // Defines the extension's properties and permissions.
+    {
+      "manifest_version": 3,
+      "name": "Website Time Tracker", // Updated name
+      "version": "1.1", // Incremented version
+      "description": "Tracks time spent on websites and stores it.", // Updated description
+      "permissions": [
+        "tabs",     // Required to access tab information (like URLs)
+        "storage"   // Required to store tracking data persistently
+        // "alarms" // Could be added later for periodic saving or cleanup
+      ],
+      "background": {
+        "service_worker": "background.js"
+      },
+      "action": {
+        // Add a popup action to view the tracked data (optional but useful)
+        "default_popup": "popup.html"
+        // "default_icon": {
+        //     "16": "images/icon16.png",
+        //     "48": "images/icon48.png",
+        //     "128": "images/icon128.png"
+        // }
+      }
+    //   "icons": {
+    //     "16": "images/icon16.png",
+    //     "48": "images/icon48.png",
+    //     "128": "images/icon128.png"
+    //   }
+    }
